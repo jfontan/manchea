@@ -1,0 +1,19 @@
+
+#new_group_form
+  %form{ :method => "post" }
+    Name:
+    %input#f_name{ :type => "text", :name => "name", :size => 80 }
+    
+    %br
+    
+    Description:
+    %textarea#f_description{ :name => "description", :rows => 5, :cols => 80}= ""
+
+    %br
+    
+    Public:
+    %input#f_public{ :type => "radio", :name => "public" }
+    
+    %br
+    
+    %button{ :type => "submit", :name => "submit", :value => "submit"} Submit!
