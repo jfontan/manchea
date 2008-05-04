@@ -9,7 +9,7 @@ class MainController < Ramaze::Controller
     layout :layout
     
     def index
-        "lero"
+        @groups=Group.all
     end
     
     def new_group
