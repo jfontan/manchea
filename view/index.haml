@@ -1,12 +1,10 @@
-!!!
-%html
-  %body
-    %h1 Group listing
-    - if @groups
-      - @groups.each do |group|
-        .group
-          .group_name=group.name
-          .group_description=group.description
-    - else
-      No groups found
+
+%h1 Group listing
+- if @groups
+  - @groups.each do |group|
+    .group
+      .group_name=group.name
+      .group_description=group.description
+- else
+  No groups found
 
