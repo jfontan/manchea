@@ -3,6 +3,17 @@
 %html
   %head
     %title Manchea!
+    %style{:type => "text/css"}
+      :sass
+        body
+          font: 1em sans-serif
+        .group
+          border: 1px solid #000
+          padding: 2px
+          margin-bottom: 4px
+          width: 400px
+        .group_description
+          font: 0.7em sans-serif
   %body
     = @content
 

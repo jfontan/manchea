@@ -11,4 +11,8 @@ class Group
     def public?
         public!=0
     end
+    
+    def link
+        "/group/#{@id}"
+    end
 end
