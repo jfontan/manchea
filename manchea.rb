@@ -21,6 +21,11 @@ class MainController < Ramaze::Controller
             group.save
         end
     end
+    
+    def group(id)
+        @group=Group[id.to_i]
+        @items=@group.items if @group
+    end
 end
 
 

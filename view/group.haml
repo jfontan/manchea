@@ -1,0 +1,34 @@
+
+- if @group
+  .group_name
+    %a{:href => @group.link}=@group.name
+  .group_description=@group.description
+  
+  %br
+  
+  -if @items && @items.length>0
+    - @items.each do |item|
+      =item.name
+  -else
+    No items found in this group.
+    
+  %br
+  %br
+  
+  #new_group_form
+    %form{ :method => "post" }
+      Name:
+      %input#f_name{ :type => "text", :name => "name", :size => 80 }
+
+      %br
+
+      Description:
+      %textarea#f_description{ :name => "description", :rows => 5, :cols => 80}= ""
+
+      %br
+
+      %button{ :type => "submit", :name => "submit", :value => "submit"} Submit!
+  
+- else
+  No group found.
+
